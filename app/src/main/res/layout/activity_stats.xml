@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/sadnessView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/sadness"
+        app:layout_constraintEnd_toEndOf="@+id/joyCount"
+        app:layout_constraintStart_toStartOf="@+id/joyCount"
+        app:layout_constraintTop_toBottomOf="@+id/joyCount" />
+
+    <TextView
+        android:id="@+id/angerView"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/anger"
+        app:layout_constraintEnd_toEndOf="@+id/loveCount"
+        app:layout_constraintStart_toStartOf="@+id/loveCount"
+        app:layout_constraintTop_toBottomOf="@+id/loveCount" />
+
+    <TextView
+        android:id="@+id/joyCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/joyView"
+        app:layout_constraintStart_toStartOf="@+id/joyView"
+        app:layout_constraintTop_toBottomOf="@+id/joyView" />
+
+    <TextView
+        android:id="@+id/loveCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/loveView"
+        app:layout_constraintStart_toStartOf="@+id/loveView"
+        app:layout_constraintTop_toBottomOf="@+id/loveView" />
+
+    <TextView
+        android:id="@+id/joyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/joy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticTitle"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/fearView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/fear"
+        app:layout_constraintEnd_toEndOf="@+id/surpriseCount"
+        app:layout_constraintStart_toStartOf="@+id/surpriseCount"
+        app:layout_constraintTop_toBottomOf="@+id/surpriseCount" />
+
+    <TextView
+        android:id="@+id/loveView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/love"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/joyView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statisticTitle"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/sadnessCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/sadnessView"
+        app:layout_constraintStart_toStartOf="@+id/sadnessView"
+        app:layout_constraintTop_toBottomOf="@+id/sadnessView" />
+
+    <TextView
+        android:id="@+id/angerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/angerView"
+        app:layout_constraintStart_toStartOf="@+id/angerView"
+        app:layout_constraintTop_toBottomOf="@+id/angerView" />
+
+    <TextView
+        android:id="@+id/surpriseView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/surprise"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/joyView"
+        app:layout_constraintTop_toBottomOf="@+id/statisticTitle"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/surpriseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/surpriseView"
+        app:layout_constraintStart_toStartOf="@+id/surpriseView"
+        app:layout_constraintTop_toBottomOf="@+id/surpriseView" />
+
+    <TextView
+        android:id="@+id/fearCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/fearView"
+        app:layout_constraintStart_toStartOf="@+id/fearView"
+        app:layout_constraintTop_toBottomOf="@+id/fearView" />
+
+    <TextView
+        android:id="@+id/statisticTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/statistics"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

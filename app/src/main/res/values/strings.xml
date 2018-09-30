@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">twang2-FeelsBook</string>
+    <string name="record">Record</string>
+    <string name="love">LOVE</string>
+    <string name="joy">JOY</string>
+    <string name="surprise">SURPRISE</string>
+    <string name="anger">ANGER</string>
+    <string name="sadness">SADNESS</string>
+    <string name="fear">FEAR</string>
+    <string name="comments_optional">Comments(Optional)</string>
+    <string name="history">History</string>
+    <string name="statistics">Statistics</string>
+    <string name="title_activity_stats">StatsActivity</string>
+    <string name="pick_time">Pick a Time</string>
+    <string name="pick_date">Pick a Date</string>
+</resources>
