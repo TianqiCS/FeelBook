@@ -3,6 +3,7 @@ package ca.ualberta.twang2.twang2_feelsbook;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 import java.util.TimeZone;
 
 public class Record {
@@ -71,8 +72,8 @@ public class Record {
         for (int i=0;i<(18-feeling.length()*2);i++) {
             sb.append(" ");
         }
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        df.setTimeZone(TimeZone.getTimeZone("UTC"));
+        // reference https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss",Locale.CANADA);
         String date = df.format(this.getDate());
         return sb.toString() + " |  " + date + "\n" + comment.getText();
     }
