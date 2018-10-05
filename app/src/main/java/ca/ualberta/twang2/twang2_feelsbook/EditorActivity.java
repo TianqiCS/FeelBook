@@ -31,13 +31,16 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-
+/*
+ * EditorActivity is the Activity for editing saved record
+ * It can be entered from HistoryActivity
+ */
 public class EditorActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "history.sav";
-    private RecordHistory rh;
-    private RadioGroup radioGroup;
-    private TextView comments;
+    private static final String FILENAME = "history.sav";  // save file name
+    private RecordHistory rh;  // Object of the history
+    private RadioGroup radioGroup;  // the radioGroup object which contains 6 different feelings
+    private TextView comments;  // comments view of the entry
     private static Calendar newTime = Calendar.getInstance();  // Date builder
 
     @Override
@@ -55,6 +58,7 @@ public class EditorActivity extends AppCompatActivity {
         String feeling = record.getFeeling();
 
         // check the feeling from record
+        // has to use switch, record know what it is but radiobutton does not
         radioGroup = findViewById(R.id.feelingGroup);
         switch (feeling) {
             case "LOVE":
@@ -168,7 +172,7 @@ public class EditorActivity extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
-    // file io with record history
+    // file i/o with record history
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -200,7 +204,6 @@ public class EditorActivity extends AppCompatActivity {
             osw.flush();
             fos.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

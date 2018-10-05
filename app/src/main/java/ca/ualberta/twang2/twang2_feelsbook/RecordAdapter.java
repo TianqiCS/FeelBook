@@ -8,7 +8,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-// used to control recycleView for history list
+/*
+ * the adapter used to control recycleView for history list
+ */
 public class RecordAdapter extends RecyclerView.Adapter<RecordAdapter.MyViewHolder> {
     private static ArrayList<Record> records;
 

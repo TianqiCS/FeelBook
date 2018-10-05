@@ -21,35 +21,35 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/*
+ * HistoryActivity is an activity for listing records
+ * it can be access by clicking the history button in the main activity
+ * it can change history list by removing records and editing records
+ * edition goes into EditorActivity
+ */
 public class HistoryActivity extends AppCompatActivity {
-    private static final String FILENAME = "history.sav";
+    private static final String FILENAME = "history.sav";  // save file
+    // pass the index of the target record
     public static final String RECORD_POSITION = "ca.ualberta.twang2.twang2_feelsbook.MESSAGE";
-    private RecyclerView recordList;
-    private RecyclerView.Adapter recordAdapter;
-    private RecordHistory rh;
+    private RecyclerView recordList;  // a list view of all record
+    private RecyclerView.Adapter recordAdapter;  // the adapter of the view
+    private RecordHistory rh;  // an object of the record history
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        loadFromFile();
-        if (rh==null) {
-            rh = new RecordHistory();
-            System.out.println("I am empty");
-        }
+        loadFromFile();  // load the records from file
 
         recordList = findViewById(R.id.recordList);
-
-        // use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
         recordList.setHasFixedSize(true);
 
         // use a linear layout manager
         RecyclerView.LayoutManager lm = new LinearLayoutManager(this);
         recordList.setLayoutManager(lm);
 
-        // specify an adapter (see also next example)
+        // setup the adapter
         recordAdapter = new RecordAdapter(rh);
         recordList.setAdapter(recordAdapter);
 
@@ -94,7 +94,7 @@ public class HistoryActivity extends AppCompatActivity {
         recordList.setAdapter(recordAdapter);
     }
 
-    // file io with record history
+    // file i/o with record history
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -126,7 +126,6 @@ public class HistoryActivity extends AppCompatActivity {
             osw.flush();
             fos.close();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }

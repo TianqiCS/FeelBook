@@ -3,10 +3,8 @@ package ca.ualberta.twang2.twang2_feelsbook;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -16,10 +14,16 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.util.Hashtable;
 
+/*
+ * the activity of stats
+ * shows the number of every feeling are recorded
+ */
 public class StatsActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "history.sav";
-    private RecordHistory rh;
+    private static final String FILENAME = "history.sav";  // save file
+    private RecordHistory rh;  // the object of record history
+
+    // views
     private TextView loveCount;
     private TextView joyCount;
     private TextView surpriseCount;
@@ -33,6 +37,7 @@ public class StatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
 
+        // initialize textViews
         loveCount = findViewById(R.id.loveCount);
         joyCount = findViewById(R.id.joyCount);
         surpriseCount = findViewById(R.id.surpriseCount);
@@ -41,7 +46,7 @@ public class StatsActivity extends AppCompatActivity {
         fearCount = findViewById(R.id.fearCount);
 
         loadFromFile();
-        update();
+        update();  // show them with actual numbers
 
 
     }
@@ -54,6 +59,7 @@ public class StatsActivity extends AppCompatActivity {
         update();
     }
 
+    // file input
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
@@ -80,6 +86,7 @@ public class StatsActivity extends AppCompatActivity {
     // update the counts of each feelings
     private void update() {
         Hashtable<String,Integer> stats = rh.getStats();
+        // get numbers from recordHistory
         loveCount.setText(stats.get("LOVE").toString());
         joyCount.setText(stats.get("JOY").toString());
         surpriseCount.setText(stats.get("SURPRISE").toString());

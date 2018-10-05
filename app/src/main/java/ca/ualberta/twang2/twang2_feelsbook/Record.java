@@ -1,11 +1,15 @@
 package ca.ualberta.twang2.twang2_feelsbook;
 
+import android.support.annotation.NonNull;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import java.util.TimeZone;
 
+/*
+ * the class of Record is the actual entity that hold the feeling information, the date and comments
+ */
 public class Record {
     // data
     private  String feeling;
@@ -66,6 +70,7 @@ public class Record {
 
 
     //override
+    @NonNull
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder(feeling);

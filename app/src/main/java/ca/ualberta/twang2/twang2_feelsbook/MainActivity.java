@@ -23,11 +23,17 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+/*
+ * MainActivity of the App
+ * can record feels with only one click
+ * provide two buttons for going to check history and statistics
+ */
+
 public class MainActivity extends AppCompatActivity {
 
-    private static final String FILENAME = "history.sav";
-    private TextView comments;
-    private RecordHistory rh;
+    private static final String FILENAME = "history.sav";  // save file
+    private TextView comments;  // get user comments input
+    private RecordHistory rh;  // the object of the record history
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
