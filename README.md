@@ -1,6 +1,8 @@
 # FeelBook
 CMPUT 301 A1
 
+Youtube Demo: https://www.youtube.com/watch?v=OdFoq65Yi_4
+
 Acknowledgements: (All resources are last retrieved between 2018-09-25 to 2018-10-05)
 
 Redman, How to create alert window, https://stackoverflow.com/questions/45797177/how-to-create-this-type-of-popup-dialogue-in-android/45797332#45797332 , Aug 21 '17
