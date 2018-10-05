@@ -1,0 +1,4 @@
+#Thu Oct 04 22:04:17 MDT 2018
+base.0=E\:\\CMPUT301\\twang2FeelsBook\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\7
+path.0=classes.dex
+renamed.0=classes.dex
